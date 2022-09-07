@@ -11,7 +11,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.topItem?.title = "Music"
+        navigationController?.navigationBar.topItem?.title = "Your music is here"
         table.delegate = self
         table.dataSource = self
         configureSongs()
@@ -27,18 +27,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func configureSongs() {
-        songs.append(Song(name: "Макс Корж",
-                          albumName: "Туда сюда",
-                          artistName: "ДАДАДА",
+        songs.append(Song(name: "Малиновый закат",
+//                          albumName: "Малый повзрослел",
+                          artistName: "Макс Корж",
                           imageName: "image1",
                           trackName: "song1"))
         songs.append(Song(name: "Макс гей",
-                          albumName: "ко мне",
+//                          albumName: "ко мне",
                           artistName: "назад",
                           imageName: "image2",
                           trackName: "song2"))
         songs.append(Song(name: "того все",
-                          albumName: "делал",
+//                          albumName: "делал",
                           artistName: "дадада",
                           imageName: "image3",
                           trackName: "song3"))
@@ -55,7 +55,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let song = songs[indexPath.row]
         cell.textLabel?.text = song.name
-        cell.detailTextLabel?.text = song.albumName
+//        cell.detailTextLabel?.text = song.albumName
         cell.accessoryType = .disclosureIndicator
         cell.imageView?.image = UIImage(named: song.imageName)
         cell.textLabel?.font = UIFont(name: "Helvetica-Bold", size: 18)
@@ -79,7 +79,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
 struct Song {
     let name: String
-    let albumName: String
+//    let albumName: String
     let artistName: String
     let imageName: String
     let trackName: String
