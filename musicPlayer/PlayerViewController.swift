@@ -46,6 +46,7 @@ class PlayerViewController: UIViewController {
 //    }()
 
     private let playPauseButton = UIButton()
+    private let playPauseButtonCircle = UIView()
     
     
     //MARK: - lifecycleFunc
@@ -92,7 +93,7 @@ class PlayerViewController: UIViewController {
             guard let player = player else {
             return
             }
-            player.volume = 0.0
+            player.volume = 0.5
             
             player.play()
         }
@@ -137,6 +138,7 @@ class PlayerViewController: UIViewController {
         
         
         
+        
         let nextButton = UIButton()
         let backButton = UIButton()
         
@@ -144,18 +146,21 @@ class PlayerViewController: UIViewController {
         let yPosition = artistNameLabel.frame.origin.y + 70 + 100
         let size: CGFloat = 50
         
+        
         playPauseButton.frame = CGRect(x: (holder.frame.size.width - size) / 2.0,
                                        y: yPosition,
                                        width: size,
                                        height: size)
-        nextButton.frame = CGRect(x: holder.frame.size.width - size - 20,
+        nextButton.frame = CGRect(x: holder.frame.size.width - size - 70,
                                   y: yPosition,
                                   width: size,
                                   height: size)
-        backButton.frame = CGRect(x: 20,
+        backButton.frame = CGRect(x: 70,
                                   y: yPosition,
                                   width: size,
                                   height: size)
+
+        
         
         
         playPauseButton.addTarget(self, action: #selector(didTapPlayPauseButton), for: .touchUpInside)
@@ -163,13 +168,22 @@ class PlayerViewController: UIViewController {
         backButton.addTarget(self, action: #selector(didTapBackButton), for: .touchUpInside)
         
 
-        playPauseButton.setBackgroundImage(UIImage(systemName: "pause"), for: .normal)
-        backButton.setBackgroundImage(UIImage(systemName: "backward"), for: .normal)
-        nextButton.setBackgroundImage(UIImage(systemName: "forward"), for: .normal)
+        playPauseButton.setBackgroundImage(UIImage(systemName: "play"), for: .normal)
+        backButton.setBackgroundImage(UIImage(systemName: "backward.end"), for: .normal)
+        nextButton.setBackgroundImage(UIImage(systemName: "forward.end"), for: .normal)
         
-        playPauseButton.tintColor = .black
-        nextButton.tintColor = .black
-        backButton.tintColor = .black
+        playPauseButton.tintColor = .white
+        playPauseButton.layer.shadowColor = UIColor.white.cgColor
+        playPauseButton.layer.shadowOffset = CGSize(width: 0.0, height: 5.0)
+        playPauseButton.layer.masksToBounds = false
+        playPauseButton.layer.shadowRadius = 9.0
+        playPauseButton.layer.shadowOpacity = 0.5
+        playPauseButton.layer.cornerRadius = playPauseButton.frame.width / 2
+        playPauseButton.layer.borderColor = UIColor.black.cgColor
+        playPauseButton.layer.borderWidth = 0.0
+        nextButton.tintColor = .white
+        nextButton.layer.borderWidth = 1.0
+        backButton.tintColor = .white
         
         
         
