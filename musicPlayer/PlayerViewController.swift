@@ -110,14 +110,10 @@ class PlayerViewController: UIViewController {
         albumImageView.image = UIImage(named: song.imageName)
         holder.addSubview(albumImageView)
         
-        songNameLabel.frame = CGRect(x: 10,
+        songNameLabel.frame = CGRect(x: 60,
                                      y: albumImageView.frame.size.height + 70,
                                       width: holder.frame.size.width-140,
                                       height: 70)
-//        albumNameLabel.frame = CGRect(x: 10,
-//                                      y: albumImageView.frame.size.height + 10 + 70,
-//                                      width: holder.frame.size.width-20,
-//                                      height: 70)
         artistNameLabel.frame = CGRect(x: 10,
                                       y: albumImageView.frame.size.height + 10 + 100,
                                       width: holder.frame.size.width-20,
@@ -127,9 +123,9 @@ class PlayerViewController: UIViewController {
 //        albumNameLabel.text = song.albumName
         artistNameLabel.text = song.artistName
         
-        songNameLabel.font = UIFont(name: "Montserrat-SemiBold", size: 26)
+        songNameLabel.font = UIFont(name: "Helvetica-Bold", size: 26)
 //        albumNameLabel.font = UIFont(name: "Helvetica", size: 18)
-        artistNameLabel.font = UIFont(name: "Montserrat-Regular", size: 22)
+        artistNameLabel.font = UIFont(name: "Helvetica-Bold", size: 22)
         
         
         holder.addSubview(songNameLabel)
