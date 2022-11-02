@@ -32,14 +32,29 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                           artistName: "Макс Корж",
                           imageName: "image1",
                           trackName: "song1"))
-        songs.append(Song(name: "Макс гей",
+        songs.append(Song(name: "Закат малиновый",
 //                          albumName: "ко мне",
-                          artistName: "назад",
+                          artistName: "Макс Корж",
                           imageName: "image2",
                           trackName: "song2"))
-        songs.append(Song(name: "того все",
+        songs.append(Song(name: "Закат",
 //                          albumName: "делал",
-                          artistName: "дадада",
+                          artistName: "Макс Корж",
+                          imageName: "image3",
+                          trackName: "song3"))
+        songs.append(Song(name: "Малый повзрослел",
+//                          albumName: "Малый повзрослел",
+                          artistName: "Макс Корж",
+                          imageName: "image1",
+                          trackName: "song1"))
+        songs.append(Song(name: "Снадобье",
+//                          albumName: "ко мне",
+                          artistName: "Макс Корж",
+                          imageName: "image2",
+                          trackName: "song2"))
+        songs.append(Song(name: "Закат",
+//                          albumName: "делал",
+                          artistName: "Макс Корж",
                           imageName: "image3",
                           trackName: "song3"))
     }
