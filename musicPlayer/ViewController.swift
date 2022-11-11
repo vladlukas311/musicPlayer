@@ -4,27 +4,35 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-
+    //MARK: -private
     @IBOutlet var table: UITableView!
-    
     private var songs = [Song]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.topItem?.title = "Your music is here"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle.fill"), style: .done, target: self, action: #selector(didButtonTapped222))
         table.delegate = self
         table.dataSource = self
         configureSongs()
         setupUI()
     }
-    
+    @objc func didButtonTapped222() {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "profile") as? ProfileViewController else { return
+        }
+        present(vc, animated: true)
+    }
     func setupUI() {
         table.translatesAutoresizingMaskIntoConstraints = false
         table.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
         table.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
         table.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
         table.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
+        
     }
+    
+    
     
     func configureSongs() {
         songs.append(Song(name: "Малиновый закат",
@@ -58,6 +66,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                           imageName: "image3",
                           trackName: "song3"))
     }
+    
+
     // table
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return songs.count
@@ -88,9 +98,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         vc.position = position
         present(vc, animated: true)
     }
-
-
 }
+
+
 
 struct Song {
     let name: String

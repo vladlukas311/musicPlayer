@@ -125,7 +125,7 @@ class PlayerViewController: UIViewController {
         
         songNameLabel.font = UIFont(name: "Helvetica-Bold", size: 26)
 //        albumNameLabel.font = UIFont(name: "Helvetica", size: 18)
-        artistNameLabel.font = UIFont(name: "Helvetica-Bold", size: 22)
+        artistNameLabel.font = UIFont(name: "Helvetica-Boldv", size: 22)
         
         
         holder.addSubview(songNameLabel)

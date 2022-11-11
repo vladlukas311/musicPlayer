@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6BC70270291EF91D000CE951 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC7026F291EF91D000CE951 /* ProfileViewController.swift */; };
 		6BD4BD8928C653DB00B65808 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD4BD8828C653DB00B65808 /* PlayerViewController.swift */; };
 		6BF8300328C240CB002A3CB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF8300228C240CB002A3CB6 /* AppDelegate.swift */; };
 		6BF8300528C240CB002A3CB6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF8300428C240CB002A3CB6 /* SceneDelegate.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6BC7026F291EF91D000CE951 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		6BD4BD8828C653DB00B65808 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		6BF82FFF28C240CB002A3CB6 /* musicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = musicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF8300228C240CB002A3CB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				6BF8300228C240CB002A3CB6 /* AppDelegate.swift */,
 				6BF8300428C240CB002A3CB6 /* SceneDelegate.swift */,
 				6BF8300628C240CB002A3CB6 /* ViewController.swift */,
+				6BC7026F291EF91D000CE951 /* ProfileViewController.swift */,
 				6BF8300828C240CB002A3CB6 /* Main.storyboard */,
 				6BF8300B28C240CC002A3CB6 /* Assets.xcassets */,
 				6BF8300D28C240CC002A3CB6 /* LaunchScreen.storyboard */,
@@ -170,6 +173,7 @@
 			files = (
 				6BF8300728C240CB002A3CB6 /* ViewController.swift in Sources */,
 				6BF8301F28C24B53002A3CB6 /* TableViewCell.swift in Sources */,
+				6BC70270291EF91D000CE951 /* ProfileViewController.swift in Sources */,
 				6BF8300328C240CB002A3CB6 /* AppDelegate.swift in Sources */,
 				6BF8300528C240CB002A3CB6 /* SceneDelegate.swift in Sources */,
 				6BD4BD8928C653DB00B65808 /* PlayerViewController.swift in Sources */,
